@@ -10,8 +10,8 @@ function! RpartialCommand()
 endfunction
 
 function! s:Rpartial(...)
-  if (len(a) > 0)
-    let pattern = "partial.*" . a:0
+  if (len(a:0) > 0)
+    let pattern = "partial.*" . a:1
   else
     let path = substitute(expand("%:h"), "app/views/", "", "")
     let action = substitute(expand("%:t:r:r"), "^_", "", "")
